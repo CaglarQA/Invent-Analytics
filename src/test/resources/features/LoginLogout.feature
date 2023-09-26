@@ -19,3 +19,8 @@ Feature: demoqa web application
      Then user sees your name
      When user enters "keyword" in the search box
      Then user see the book containing "keyword"
+
+
+     @AC3
+     Scenario: Add and Delete Book
+
