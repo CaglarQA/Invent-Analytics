@@ -11,3 +11,11 @@ Feature: demoqa web application
     When user clicks Logout button
     Then user is on the login Page again
 
+
+   @AC2
+   Scenario: Search Book
+     When user clicks Login button
+     And user enters "username" and "password" and press enters
+     Then user sees your name
+     When user enters "keyword" in the search box
+     Then user see the book containing "keyword"

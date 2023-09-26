@@ -17,4 +17,11 @@ public class BooksPage {
 
     @FindBy(id = "submit")
     public WebElement logoutButton;
+
+    @FindBy(id = "searchBox")
+    public WebElement inputSearchBox;
+
+    @FindBy(xpath = "(//a)[3]")
+    public WebElement searchedBook;
+
 }
