@@ -6,8 +6,7 @@ Feature: demoqa web application
   @AC1
   Scenario:Verification of Login and Logout functions
     When user clicks Login button
-    And user enters "username" and "password"
-    And users press enter
+    And user enters "username" and "password" and press enters
     Then user sees your name
     When user clicks Logout button
     Then user is on the login Page again

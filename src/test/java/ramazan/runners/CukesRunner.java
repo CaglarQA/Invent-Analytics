@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "ramazan/step_def",
-        dryRun = true,
+        dryRun = false,
         tags = "@AC1"
 )
 
