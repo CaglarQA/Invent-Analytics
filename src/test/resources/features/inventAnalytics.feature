@@ -1,3 +1,4 @@
+@invent
 Feature: demoqa web application
 
   Background:
@@ -19,6 +20,7 @@ Feature: demoqa web application
      Then user sees your name
      When user enters "keyword" in the search box
      Then user see the book containing "keyword"
+     When user clicks Logout button
 
 
      @AC3
@@ -39,6 +41,8 @@ Feature: demoqa web application
        Then user is on the profile page
        And user sees selectedbooks
        When user deletes all books
+       When user clicks Logout button
+
 
       @AC4
       Scenario: Change Row-Number
