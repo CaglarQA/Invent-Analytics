@@ -40,6 +40,16 @@ Feature: demoqa web application
        And user sees selectedbooks
        When user deletes all books
 
+      @AC4
+      Scenario: Change Row-Number
+        When user clicks Login button
+        And user enters "username" and "password" and press enters
+        And user goes its profile
+        Then user is on the profile page
+        When user changes rows
+
+
+
 
 
 
