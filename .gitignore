@@ -12,7 +12,7 @@ target/
 *.iws
 *.iml
 *.ipr
-.src/test/java/ramazan/utily/Driver.java
+Driver.java
 
 ### Eclipse ###
 .apt_generated
