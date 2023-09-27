@@ -12,7 +12,7 @@ target/
 *.iws
 *.iml
 *.ipr
-/Driver.java
+*.java
 
 ### Eclipse ###
 .apt_generated
