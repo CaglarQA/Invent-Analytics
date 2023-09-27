@@ -21,7 +21,7 @@ public class BooksPage {
     @FindBy(id = "searchBox")
     public WebElement inputSearchBox;
 
-    @FindBy(xpath = "(//a)[3]")
+    @FindBy(className = "mr-2")
     public WebElement searchedBook;
 
 }

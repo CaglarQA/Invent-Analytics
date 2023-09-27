@@ -23,4 +23,25 @@ Feature: demoqa web application
 
      @AC3
      Scenario: Add and Delete Book
+       When user clicks Login button
+       And user enters "username" and "password" and press enters
+       Then user sees your name
+       When user enters "keyword" in the search box
+       Then user see the book containing "keyword"
+       When user clicks on the book
+       And user add book
+       And user returns to the bookstore
+       When user enters again "secondkeyword" in the search box
+       Then user see  again the book containing "secondkeyword"
+       When user clicks on the book
+       And user add book
+       And user goes its profile
+       Then user is on the profile page
+       And user sees selectedbooks
+       When user deletes all books
+
+
+
+
+
 
