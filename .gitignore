@@ -2,9 +2,6 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-utily/
-
-
 
 
 ### IntelliJ IDEA ###
@@ -15,6 +12,7 @@ utily/
 *.iws
 *.iml
 *.ipr
+.src/test/java/ramazan/utily/Driver.java
 
 ### Eclipse ###
 .apt_generated
