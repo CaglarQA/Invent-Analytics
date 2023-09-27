@@ -17,4 +17,10 @@ public class ProfilePage {
     @FindBy(className = "mr-2")
     public List<WebElement> booksInBox;
 
+    @FindBy(xpath = "(//button[@id='submit'])[3]")
+    public WebElement deleteAllBooks;
+
+    @FindBy(id = "closeSmallModal-ok")
+    public WebElement firstAccept;
+
 }

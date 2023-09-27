@@ -1,5 +1,6 @@
 package ramazan.step_def;
 
+import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -30,8 +31,10 @@ public class AddDeleteBookStepDef {
     public void user_add_book() throws InterruptedException {
         Thread.sleep(1000);
         bookStorePage.addNewBook.click();
-        Thread.sleep(4500);
-      //  Driver.getDriver().switchTo().alert().accept();
+        Thread.sleep(3000);
+
+        //System.out.println("Alert Message 1 : " + Driver.getDriver().switchTo().alert().getText());
+        //Thread.sleep(1000);
     }
     @When("user returns to the bookstore")
     public void user_returns_to_the_bookstore() {
@@ -79,15 +82,26 @@ public class AddDeleteBookStepDef {
         for (WebElement eachBook : profilePage.booksInBox) {
                 books.add(eachBook.getText());
         }
-        System.out.println("Books"+books);
-        books.get(0).toString().contains(ConfigurationReader.getProperty())
+        System.out.println("Books_Received :"+books);
+          Assert.assertTrue(books.get(0).toString().toLowerCase().contains(ConfigurationReader.getProperty("keyword").toLowerCase()));
+          Assert.assertTrue(books.get(1).toString().toLowerCase().contains(ConfigurationReader.getProperty("keywordSecond").toLowerCase()));
+
 
 
     }
     @When("user deletes all books")
-    public void user_deletes_all_books() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_deletes_all_books() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollBy(0,550)", "");
+
+        profilePage.deleteAllBooks.click();
+        Thread.sleep(2500);
+        profilePage.firstAccept.click();
+        Thread.sleep(2500);
+        Driver.getDriver().switchTo().alert().accept();
+
+
+
     }
 
 }
