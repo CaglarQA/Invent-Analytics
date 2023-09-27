@@ -23,4 +23,7 @@ public class ProfilePage {
     @FindBy(id = "closeSmallModal-ok")
     public WebElement firstAccept;
 
+    @FindBy(xpath = "//select")
+    public WebElement selectRow;
+
 }

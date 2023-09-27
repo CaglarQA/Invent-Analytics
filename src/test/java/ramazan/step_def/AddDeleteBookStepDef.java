@@ -59,10 +59,11 @@ public class AddDeleteBookStepDef {
         Assert.assertTrue(searchedBook.toLowerCase().contains(keyword.toLowerCase()));
     }
     @When("user goes its profile")
-    public void user_goes_its_profile() {
-
+    public void user_goes_its_profile() throws InterruptedException {
+        Thread.sleep(2000);
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,550)", "");
+        Thread.sleep(1500);
 
 
         for (WebElement each : bookStorePage.text) {

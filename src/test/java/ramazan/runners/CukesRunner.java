@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "ramazan/step_def",
         dryRun = false,
-        tags = "@AC3"
+        tags = "@AC4"
 )
 
 public class CukesRunner {
