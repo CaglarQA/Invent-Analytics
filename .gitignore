@@ -3,6 +3,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 .Driver.java
+src/test/java/ramazan/utily/Driver.java
 
 
 
